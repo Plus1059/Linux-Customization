@@ -1,0 +1,27 @@
+[global_config]
+  title_hide_sizetext = True
+  title_transmit_bg_color = "#22242d"
+  title_receive_bg_color = "#22242d"
+  title_inactive_fg_color = "#ffffff"
+  title_inactive_bg_color = "#27222d"
+[keybindings]
+[profiles]
+  [[default]]
+    background_color = "#22242d"
+    background_darkness = 0.9
+    background_type = transparent
+    cursor_shape = ibeam
+    cursor_color = "#26a269"
+    foreground_color = "#ffffff"
+    scrollback_infinite = True
+    palette = "#000000:#cd0000:#00cd00:#cdcd00:#0000cd:#cd00cd:#00cdcd:#faebd7:#404040:#ff0000:#00ff00:#ffff00:#0000ff:#ff00ff:#00ffff:#ffffff"
+    bold_is_bright = True
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]
