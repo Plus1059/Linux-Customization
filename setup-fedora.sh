@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 echo 'Updating System'
 
 sudo dnf update
