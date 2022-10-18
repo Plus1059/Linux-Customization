@@ -1,22 +1,22 @@
 #!/bin/bash
 
+echo 'Setting Resolution'
+
+xrandr --newmode "2560x1440_60.00"  311.83  2560 2744 3024 3488  1440 1441 1444 1490  -HSync +Vsync
+xrandr --addmode Virtual-1 "2560x1440_60.00"
+xrandr --output Virtual-11 --mode "2560x1440_60.00"
+
 echo 'Installing Nala'
 
 echo "deb http://deb.volian.org/volian/ scar main" | sudo tee /etc/apt/sources.list.d/volian-archive-scar-unstable.list
 wget -qO - https://deb.volian.org/volian/scar.key | sudo tee /etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg > /dev/null
 sudo apt update
-sudo apt install nala
+sudo apt install nala -y
 
 echo 'Updating System'
 
 sudo nala update
-sudo nala upgrade
-
-echo 'Setting Resolution'
-
-xrandr --newmode "2560x1440_60.00"  311.83  2560 2744 3024 3488  1440 1441 1444 1490  -HSync +Vsync
-xrandr --addmode Virtual-1 "2560x1440_60.00"
-xrandr --output Virtual1 --mode "2560x1440_60.00"
+sudo nala upgrade -y
 
 echo 'Setting up customizations'
 
