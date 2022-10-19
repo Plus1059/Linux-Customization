@@ -29,7 +29,6 @@ mv .zshrc_Parrot_OS ~/.zshrc
 sudo mkdir ~/.config/terminator
 sudo mv config ~/.config/terminaor/config
 mv kali-ascii-green.png ~/Pictures
-wget https://store.kde.org/images/system/download.svg ~/Downloads
 
 echo 'Installing Sublime-Text'
 
@@ -39,4 +38,5 @@ sudo nala update
 sudo nala install sublime-text -y
 
 echo 'Icon theme:
-https://store.kde.org/images/system/download.svg'
+https://store.kde.org/images/system/download.svg
+Material-Black-Lime-Numix-FLAT'
