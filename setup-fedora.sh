@@ -19,6 +19,7 @@ sudo usermod --shell /bin/zsh $(whoami)
 sudo git clone https://github.com/zsh-users/zsh-autosuggestions /usr/share
 sudo git git clone https://github.com/zsh-users/zsh-syntax-highlighting.git /usr/share
 mv .zshrc_Parrot_OS ~/.zshrc
+sudo mkdir ~/.config/terminator/
 sudo mkdir ~/.config/terminator/config
 sudo mv config ~/.config/terminaor/config
 
