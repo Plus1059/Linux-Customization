@@ -46,3 +46,16 @@ sudo dnf groupupdate sound-and-video
 echo 'Setting up Flatpak'
 
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+echo 'Make it look pretty
+Install Gnome Twekas
+Install Extension Manager
+Instal User Themes in Extension Manager
+This theme and icons are nice: 
+https://github.com/vinceliuice/Orchis-theme #Theme
+  -requires gnome-themes-extra gtk-murrine-engine and sassc
+    sudo dnf install gnome-themes-extra gtk-murrine-engine and sassc -y
+https://github.com/vinceliuice/Colloid-icon-theme #Icons
+Install Dash to Dock in Extension Manager
+Install Blur my Shell
+Install Vitals'
