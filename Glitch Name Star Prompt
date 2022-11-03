@@ -1,0 +1,2 @@
+NEWLINE=$'\n'
+PROMPT="%B%F{red}┌──%f%b%F{red}(%f%B%F{green}Cḻ̵̡̱̬͍̓͜͝͠ayto̴̖̒͝n%f%b%B%F{yellow}⚛ %f%b%B%F{cyan}Fȇ̷̢̨̛̟̘̳̞̫͎̦̥̽̒̐͗͐͋͆͝dor̸̥̬̰͖̖͗̀̎̔̆͝ͅa%f%b%F{red})-[%f%B%~%b%F{red}]%f${NEWLINE}%B%F{red}└─%f%b%F{red}[%f%B%F{yellow}🟊%f%b%F{red}]%f "
