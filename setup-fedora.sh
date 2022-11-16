@@ -8,6 +8,17 @@ iw="\e[3;97m" # Italic White
 m="\e[95m" # Magenta
 c="\e[96m" # Cyan
 
+echo "${bg}Setting up customizations${ec}"
+
+sudo dnf install terminator
+sudo dnf install zsh
+sudo usermod --shell /bin/zsh $(whoami)
+sudo git clone https://github.com/zsh-users/zsh-autosuggestions /usr/share/zsh-autosuggestions
+sudo git git clone https://github.com/zsh-users/zsh-syntax-highlighting.git /usr/share/zsh-syntax-highlighting
+mv .zshrc_Parrot_OS ~/.zshrc
+sudo mkdir ~/.config/terminator/
+sudo mv config ~/.config/terminaor/config
+
 echo "${bg}Updating System${ec}"
 
 sudo dnf update
@@ -18,18 +29,6 @@ echo "${bg}Installing qemu${ec}"
 sudo dnf group install --with-optional virtualization
 sudo systemctl start libvirtd
 sudo systemctl enable libvirtd
-
-echo "${bg}Setting up customizations${ec}"
-
-sudo dnf install terminator
-sudo dnf install zsh
-sudo usermod --shell /bin/zsh $(whoami)
-sudo git clone https://github.com/zsh-users/zsh-autosuggestions /usr/share
-sudo git git clone https://github.com/zsh-users/zsh-syntax-highlighting.git /usr/share
-mv .zshrc_Parrot_OS ~/.zshrc
-sudo mkdir ~/.config/terminator/
-sudo mkdir ~/.config/terminator/config
-sudo mv config ~/.config/terminaor/config
 
 echo "${bg}Installing Sublime-Text${ec}"
 
