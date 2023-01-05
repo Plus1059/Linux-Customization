@@ -8,7 +8,7 @@ iw="\e[3;97m" # Italic White
 m="\e[95m" # Magenta
 c="\e[96m" # Cyan
 
-echo "${bg} ▄▄▄▄▄▄▄ ▄▄   ▄▄ ▄▄▄▄▄▄▄    ▄▄   ▄▄ ▄▄▄▄▄▄ ▄▄   ▄▄ ▄▄▄▄▄▄ ▄▄   ▄▄ 
+echo -e "${bg} ▄▄▄▄▄▄▄ ▄▄   ▄▄ ▄▄▄▄▄▄▄    ▄▄   ▄▄ ▄▄▄▄▄▄ ▄▄   ▄▄ ▄▄▄▄▄▄ ▄▄   ▄▄ 
 █       █  █ █  █       █  █  █ █  █      █  █ █  █      █  █ █  █
 █   ▄   █  █▄█  █   ▄   █  █  █▄█  █  ▄   █  █▄█  █  ▄   █  █▄█  █
 █  █▄█  █       █  █ █  █  █       █ █▄█  █       █ █▄█  █       █
@@ -19,7 +19,7 @@ echo "${bg} ▄▄▄▄▄▄▄ ▄▄   ▄▄ ▄▄▄▄▄▄▄    ▄�
                       ${g}▒█▀▒██▀░█▀▄░▄▀▄▒█▀▄▒▄▀▄
                       ░█▀░█▄▄▒█▄▀░▀▄▀░█▀▄░█▀█${ec}"
 
-echo "${bg}Setting up customizations${ec}"
+echo -e "${bg}Setting up customizations${ec}"
 
 sudo dnf install terminator
 sudo dnf install zsh
@@ -30,47 +30,42 @@ mv .zshrc_Parrot_OS ~/.zshrc
 sudo mkdir ~/.config/terminator/
 sudo mv config ~/.config/terminaor/config
 
-echo "${bg}Updating System${ec}"
+echo -e "${bg}Updating System${ec}"
 
 sudo dnf update
 sudo dnf upgrade
 
-echo "${bg}Installing qemu${ec}"
+echo -e "${bg}Installing qemu${ec}"
 
 sudo dnf group install --with-optional virtualization
 sudo systemctl start libvirtd
 sudo systemctl enable libvirtd
 
-echo "${bg}Installing Sublime-Text${ec}"
+echo -e "${bg}Installing Sublime-Text${ec}"
 
 sudo rpm -v --import https://download.sublimetext.com/sublimehq-rpm-pub.gpg
 sudo dnf config-manager --add-repo https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
 sudo dnf install sublime-text
 
-echo "${bg}Installing Timeshift${ec}"
+echo -e "${bg}Installing Timeshift${ec}"
 
 sudo dnf install timeshift
 
-echo "${bg}Setting up RPMFusion${ec}"
+echo -e "${bg}Setting up RPMFusion${ec}"
 
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf groupupdate core
 
-echo "${bg}Setting up Multimedia${ec}"
+echo -e "${bg}Setting up Multimedia${ec}"
 
 sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
 sudo dnf groupupdate sound-and-video
 
-echo "${bg}Setting up Flatpak${ec}"
+echo -e "${bg}Setting up Flatpak${ec}"
 
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-echo "${bg}Installing Firefox theme${ec}"
-# https://github.com/rafaelmardojai/firefox-gnome-theme
-
-curl -s -o- https://raw.githubusercontent.com/rafaelmardojai/firefox-gnome-theme/master/scripts/install-by-curl.sh | bash
-
-echo "${bug}Make it look pretty${ec}
+echo -e "${bug}Make it look pretty${ec}
 ${iw}Install ${ec}${g}Gnome Tweaks${ec}
 ${iw}Install ${ec}${g}Extension Manager${ec}
 
