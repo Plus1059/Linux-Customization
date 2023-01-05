@@ -53,6 +53,10 @@ echo -e "${bg}Updating System${ec}"
 #sudo nala update
 #sudo nala upgrade -y
 
+echo -e "${bg}Installing Gimp${ec}"
+
+sudo nala install gimp -y
+
 echo -e "${bug}Icon theme:${ec}
 ${g}https://store.kde.org/p/1333360${ec}
 ${iw}Material-Black-Lime-Numix-FLAT${ec}"
